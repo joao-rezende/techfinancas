@@ -1,0 +1,42 @@
+.inputArea {
+    display: flex;
+    flex-direction: column;
+    min-width: 370px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inputArea:focus-within label {
+  transform: translate(0, 6px) scale(0.75);
+}
+
+.inputFloatLabel {
+    width: 100%;
+    height: 56px !important;
+    padding: 14px 16px 0 10px !important;
+    outline: 0;
+}
+
+.floatLabel {
+    font-size: 14px;
+    padding: 0 12px;
+    pointer-events: none;
+    position: absolute;
+    margin: 0;
+    transform-origin: top left;
+    transition: all 0.2s ease-out;
+    
+    transform: translate(0, 17px) scale(1);
+}
+
+.floatLabelActive {
+    font-size: 14px;
+    padding: 0 12px;
+    pointer-events: none;
+    position: absolute;
+    margin: 0;
+    transform-origin: top left;
+    transition: all 0.2s ease-out;
+
+    transform: translate(0, 6px) scale(0.75);
+}

@@ -1,0 +1,10 @@
+.container {
+  border: 1px solid white;
+  margin: 0 auto;
+}
+
+.btn-green {
+  background-color: #187033;
+  color: #fff;
+  border-radius: 4px;
+}
