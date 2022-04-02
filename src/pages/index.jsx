@@ -17,11 +17,9 @@ export default function Index() {
       <div>
         <Head>
           <title>Login - TechFinanças</title>
-          <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i" rel="stylesheet" />
         </Head>
 
         <div id="wrapper">
-          {/* <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} /> */}
           <header id="header">
             <div className={styles.logo}>
               <Image
@@ -33,10 +31,10 @@ export default function Index() {
             <div className="content">
               <div className="inner">
                 <h1 style={{ marginBottom: 25 }}>LOGIN</h1>
-                <FloatLabel id="email" type="email" name="email" text="E-mail" />
-                <FloatLabel id="password" type="password" name="password" text="Senha" />
+                <FloatLabel id="email" type="email" name="email" label="E-mail" />
+                <FloatLabel id="password" type="password" name="password" label="Senha" />
 
-                <Link href="/">Esqueci minha senha</Link>
+                <Link href="/forgot-password">Esqueci minha senha</Link>
               </div>
             </div>
             <nav>

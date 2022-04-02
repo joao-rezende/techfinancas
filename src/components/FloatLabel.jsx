@@ -24,7 +24,7 @@ export default function FloatLabel(props) {
         onChange={(e) => handleTextChange(e.target.value)} />
 
       <label className={!isActive ? styles.floatLabel : styles.floatLabelActive} htmlFor={props.id}>
-        {props.text}
+        {props.label}
       </label>
     </div>
   )
