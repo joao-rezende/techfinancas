@@ -1,0 +1,21 @@
+.type-label {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 22px !important;
+  border: 1px solid transparent;
+  border-radius: 2em;
+}
+
+.type-despesa {
+  color: hsl(352, 66%, 77%);
+  background: rgba(215, 58, 74, 0.18);
+  border-color: hsla(352, 66%, 77%, 0.3);
+}
+
+.type-receita {
+  color: hsl(171, 100%, 45%);
+  background: rgba(0, 134, 114, 0.18);
+  border-color: hsla(171, 100%, 45%, 0.3);
+}

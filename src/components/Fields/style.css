@@ -1,0 +1,66 @@
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.form-group label {
+  position: static;
+  font-size: 14px;
+  color: #adbac7;
+  line-height: 1.5;
+  font-weight: 600;
+  overflow-wrap: break-word;
+}
+
+.form-group input {
+  background-color: #1c2128;
+  
+}
+
+.form-group select {
+  display: inline-block;
+  max-width: 100%;
+  height: 32px;
+  padding-right: 24px;
+  background-color: #22272e;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzZlNzY4MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNC40MjcgOS40MjdsMy4zOTYgMy4zOTZhLjI1MS4yNTEgMCAwMC4zNTQgMGwzLjM5Ni0zLjM5NkEuMjUuMjUgMCAwMDExLjM5NiA5SDQuNjA0YS4yNS4yNSAwIDAwLS4xNzcuNDI3ek00LjQyMyA2LjQ3TDcuODIgMy4wNzJhLjI1LjI1IDAgMDEuMzU0IDBMMTEuNTcgNi40N2EuMjUuMjUgMCAwMS0uMTc3LjQyN0g0LjZhLjI1LjI1IDAgMDEtLjE3Ny0uNDI3eiIgLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  background-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-group input,
+.form-group select {
+  overflow: visible;
+  width: 100%;
+  max-width: 100%;
+  color: #adbac7;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #444c56;
+  border-radius: 6px;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+  background-color: #22272e;
+  border-color: #539bf5;
+  outline: none;
+  box-shadow: inset 0 0 0 1px transparent;
+}
+
+.form-group input:focus-visible,
+.form-group select:focus-visible {
+  border-color: #539bf5;
+  outline: none;
+  box-shadow: inset 0 0 0 1px #539bf5;
+}

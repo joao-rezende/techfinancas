@@ -1,0 +1,13 @@
+form>.form-group:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #373e47;
+}
