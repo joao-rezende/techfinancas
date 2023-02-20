@@ -10,6 +10,9 @@ REACT_APP_API_URL=http://localhost:3080/api
 ```
 Sendo a URL da API que fará a consulta dos dados, quando o repositório remoto for escolhido.
 
+A API utilizada esta no seguinte repositório: <br>
+https://github.com/joao-rezende/techfinancas_api
+
 ### Modo de desenvolvimento
 
 Ainda na pasta do projeto, rode o comando:
