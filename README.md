@@ -13,6 +13,8 @@ Sendo a URL da API que fará a consulta dos dados, quando o repositório remoto 
 A API utilizada esta no seguinte repositório: <br>
 https://github.com/joao-rezende/techfinancas_api
 
+Ela está hospedada no domínio https://financas.technologyon.com.br.
+
 ### Modo de desenvolvimento
 
 Ainda na pasta do projeto, rode o comando:
