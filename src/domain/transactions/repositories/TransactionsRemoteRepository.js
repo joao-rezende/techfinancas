@@ -10,9 +10,6 @@ class TransactionsRemoteRepository extends TransactionsRepository {
       body: JSON.stringify(transaction)
     });
 
-
-    console.log(response.ok)
-
     const data = await response.json();
     return data;
   }
