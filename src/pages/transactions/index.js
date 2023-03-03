@@ -52,7 +52,6 @@ function Transactions() {
   });
 
   const handleOpenTransactionModal = () => {
-    setEditTransaction({});
     setShowModal(true);
   };
 
