@@ -142,7 +142,7 @@ function Transactions() {
       {
         showConfirmDelete &&
         <Modal title="Confirmar exclusão" handleClose={handleCloseConfirmDelete}>
-          <p style={{ marginTop: 0 }}>Tem certeza que deseja excluir a transação <strong>{editTransaction.description}</strong>?</p>
+          <p style={{ marginTop: 0 }}>Tem certeza que deseja excluir a transação <strong>{editTransaction.description}</strong> de <strong>{numberFormat.format(editTransaction.amount)}</strong>?</p>
           <hr />
           <div>
             <button type="button" className='btn-danger' onClick={handleCloseConfirmDelete}>Não</button>

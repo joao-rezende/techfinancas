@@ -19,7 +19,11 @@ const TransactionForm = ({ transaction, onSubmit, onCancel }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ description, amount, date, type });
+    const dateTransaction = new Date(date);
+    const dataAtual = new Date();
+    const completed = dataAtual >= dateTransaction;
+
+    onSubmit({ description, amount, date, type, completed });
     resetForm();
   }
 
