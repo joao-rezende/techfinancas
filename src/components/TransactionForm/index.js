@@ -7,14 +7,14 @@ import './style.css';
 const TransactionForm = ({ transaction, onSubmit, onCancel }) => {
   const [description, setDescription] = useState(transaction.description ?? '');
   const [amount, setAmount] = useState(transaction.amount ?? 0);
-  const [date, setDate] = useState(transaction.date ?? '');
-  const [type, setType] = useState(transaction.type ?? 1);
+  const [date, setDate] = useState(transaction.date ? transaction.date.substring(0, 10) : '');
+  const [type, setType] = useState(transaction.type ?? 2);
 
   const resetForm = () => {
     setDescription('');
     setAmount(0);
     setDate('');
-    setType(1);
+    setType(2);
   }
 
   const handleSubmit = (e) => {

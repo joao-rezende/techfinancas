@@ -18,15 +18,27 @@ function Transactions() {
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
 
+  const dateNow = new Date();
+  const currentYear = dateNow.getFullYear();
+  const [monthTransactions, setMonthTransactions] = useState(dateNow.getMonth());
+  const [yearTransactions, setYearTransactions] = useState(currentYear);
+
   useEffect(() => {
     const fetchTransactions = async () => {
-      setTransacitons(await TransactionsService.getAll(repository));
+      const initialDate = new Date(yearTransactions, monthTransactions, 1);
+      const finalDate = new Date(yearTransactions, monthTransactions + 1, 0);
+
+      const filters = {
+        initialDate: initialDate.toISOString().substring(0, 10),
+        finalDate: finalDate.toISOString().substring(0, 10)
+      }
+      const resTransactions = await TransactionsService.getAll(repository, filters);
 
       let totalBalance = 0;
       let totalIncome = 0;
       let totalExpense = 0;
 
-      transactions.forEach((transaction) => {
+      resTransactions.forEach((transaction) => {
         if (transaction.type === 1) {
           totalBalance += parseFloat(transaction.amount);
           totalIncome += parseFloat(transaction.amount);
@@ -39,12 +51,13 @@ function Transactions() {
       setIncome(totalIncome);
       setBalance(totalBalance);
       setExpense(totalExpense);
+      setTransacitons(resTransactions);
     }
 
     fetchTransactions();
 
     setRefresh(false);
-  }, [transactions, repository, refresh]);
+  }, [yearTransactions, monthTransactions, repository, currentYear, refresh]);
 
   const numberFormat = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -125,7 +138,7 @@ function Transactions() {
       </div>
       <div className='content'>
         <div className='title'>
-          <h2>Transações</h2>
+          <h2>Transações - <span>Agosto de {currentYear}</span></h2>
           <button className='btn-primary' onClick={handleOpenTransactionModal}>
             Nova transação
           </button>

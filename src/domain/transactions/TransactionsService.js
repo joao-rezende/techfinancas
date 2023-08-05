@@ -3,8 +3,8 @@ export class TransactionsService {
     return await repository.create(transaction);
   }
 
-  static async getAll(repository) {
-    return await repository.getAll();
+  static async getAll(repository, filters) {
+    return await repository.getAll(filters);
   }
 
   static async edit(repository, id, transaction) {

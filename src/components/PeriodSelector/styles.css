@@ -1,0 +1,60 @@
+.period.hide {
+  display: none;
+}
+
+.period {
+  position: absolute;
+  border-radius: 5px;
+  top: 40px;
+  left: 168px;
+  background-color: #22272e;
+  border: 1px solid #444c56;
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.select {
+  margin: 0;
+}
+
+.select .up,
+.select .down {
+  text-align: center;
+  cursor: pointer;
+}
+
+.select .up {
+  margin-bottom: 4px;
+}
+
+.select .down {
+  margin-top: 4px;
+}
+
+.select ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  max-height: 222px;
+  overflow: auto;
+  overflow-x: hidden;
+  scrollbar-width: 0;
+}
+
+/* Estilize a barra de rolagem personalizada */
+.select ul::-webkit-scrollbar {
+  display: none;
+}
+
+.select ul li {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.select ul li.selected {
+  background-color: #316DCA;
+  color: white;
+}

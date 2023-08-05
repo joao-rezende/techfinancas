@@ -14,8 +14,9 @@ class TransactionsRemoteRepository extends TransactionsRepository {
     return data;
   }
 
-  async getAll() {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/v1/transactions`);
+  async getAll(filters) {
+    const queryParams = new URLSearchParams(filters);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/v1/transactions?${queryParams}`);
     const data = await response.json();
     return data;
   }
